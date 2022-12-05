@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Website Assignment
+   
+   Personalized Stories Page 1
+   Author: Lourdes Linares
+   Date:   11.20.2022
+   
+   Filename: contact.html
+   -->
+   
+   <!-- NAV LIST TIPS https://css-tricks.com/targetting-menu-elements-submenus-navigation-bar/ -->
+   <!-- https://www.kennethkleiner.com/linares/index.html -->
+   
+   <!-- Comment -->
+   
+   <meta charset="utf-8" />
+   <link href="css/reset.css" rel="stylesheet" type="" /> <!-- FILL IN -->
+   <link href="css/form.css" rel="stylesheet" type="" /> <!-- FILL IN -->
+   
+   <title>Create Your Personalized Story</title>
+</head>
+
+<body class="form">
+	<header class="form"></header>
+	<div class="formintro">
+		<h2>Get started on your adventure in a few simple steps!</h2>
+			<p>To give our writers an idea for your personalized adventure please fill out the following form.
+			There are some strongly recommended fields to fill out to form the basis of your story and an
+			expandable text box for any additional comments and nuances you'd like to put in your story.
+			Now start inventing and begin the fun!</p>
+	</div>
+	<div class="form">
+		<fieldset id="litstyler">
+			<legend>Adveturer Info</legend>
+			
+			<label for="mainCharName">Main Character Name</label>
+			<input name="maincharname" id="mainCharName" type="text" autofocus/>
+			
+			<label for="supCharName">Supporting Character Name</label>
+			<input name="supcharname" id="supCharName" type="text" />
+			
+			<label for="country">Country of Origin</label>
+			<input name="country" id="country" type="text" placeholder="e.g. Middle Earth"/>
+			
+			<label for="typeOfLit">Type of Literature</label>
+				<select name="type" id="typeOfLit">
+					<option value="story">Story</option>
+					<option value="poem">Poem</option>
+					<option value="essay">Essay</option>
+				</select>
+			
+			<label for="genre">Genre</label>
+				<select name="genre" id="genre">
+					<option value="comedy">Comedy</option>
+					<option value="drama">Drama</option>
+					<option value="fairytale">Fairy Tale</option>
+					<option value="fantasy">Fantasy</option>
+					<option value="folklore">Folklore</option>
+					<option value="historicalfiction">Historical Fiction</option>
+					<option value="horror">Horror</option>
+					<option value="mystery">Mystery</option>
+					<option value="shortstory">Short Story</option>
+					<option value="autoBio">Biogrphy/Autobiography</option>
+				</select>
+			
+			<label for="location">Set in: </label>
+			<input name="location" id="location" type="text" placeholder="e.g. The Shire"/>
+			
+			<label for="level">Reading Level by Grade</label>
+				<div class="slider">
+					1 <input type="range" id="level" name="level" min="1" max="12" step="1" value="0"> 12
+				</div>
+			
+			<label for="comments" id="comments">Additional Lit Info</label>
+			<textarea id="commentBox" name="comments" tabindex="1" placeholder="Enter any additional comments or storylines you'd like to include"></textarea>
+			<button name="submitButton" onclick="formSubmit()">Submit</button>
+			<button data-preview-target="#preview">Preview</button>
+			<div class="preview" id="preview">
+				<div class="previewHeader">
+					<div class="previewTitle">Here is the information we have so far: </div>
+					<button data-closePreview-button class="closePreviewButton">&times;</button>
+				</div>
+				<div class="previewBody" id="previewBody">
+
+				</div>
+			</div>
+			<div id="overlayPreview"></div>
+		</fieldset>
+	</div>
+	
+</body>
+<footer>
+<p>&copy;2022 Linaresl1836 All rights reserved</p>
+<script	src="storytimeBuild.js" ></script>
+</footer>
+
+</html>

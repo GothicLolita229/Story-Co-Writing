@@ -1,0 +1,514 @@
+@charset "utf-8";
+
+/*
+   Author: Lourdes Linares
+   Date:   11.20.2022
+
+   Filename: forms.css
+
+*/
+
+/* Header Styles */
+
+header
+{
+	background-image: url('../photos/mainnav.png');
+	background-size: 100% 100%;
+	width: 100%;
+	min-width: 150px;
+	max-width: 1000px;
+    margin: auto auto;
+    padding: 150px 15px;
+	filter: drop-shadow(2px 4px 6px black);
+}
+
+/*header.story
+{
+	background-image: url('../photos/mainnav.png');
+	background-size: 100% 100%;
+	width: 100%;
+	min-width: 150px;
+	max-width: 1000px;
+    margin: auto auto;
+    padding: 150px 15px;
+	filter: drop-shadow(2px 4px 6px black);
+}*/
+
+/* Body Styles */
+body.form
+{
+	background-color: rgb(234, 177, 159);
+}
+
+body
+{
+	background-color: #EBC9A0;
+	max-width: 1000px;
+	margin: auto;
+}
+
+/*	hpIntro (HomePage) Styles	*/
+
+article.hpIntro
+{
+	/*margin: 10% 30% 10%;*/
+	
+	font-family: Copperplate, Papyrus, fantasy;
+	background-image: url('../photos/pastelmeadow.png');
+	background-size: 100% 100%;
+	width: 75%;
+	height: 75%;
+	max-height: 1000px;
+	min-width: 600px;
+	max-width: 700px;
+    margin: 40px auto 80px;
+    padding: 150px 15px;
+	filter: drop-shadow(2px 4px 6px black);
+}
+
+article.hpIntro .content
+{
+	background: rgba(187, 197, 196, 0.5);
+    width: 50%;
+    height: 100%;
+	text-align: center;
+	padding: 20px;
+}
+
+h3.title
+{
+	margin: 15px;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+
+/*	Story Styles	*/
+@font-face {
+	font-family: celtic-garamond;
+	src: url("FontsFree-Net-CELTG___.ttf");
+}
+
+article.story div.title-wrap
+{
+	background-image: url('../photos/mossyforrest.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*width: 85%;*/
+	margin: 0 auto 50px;
+	padding: 50px 0px;
+	background-position: center;
+	
+}
+
+article.story h2.title-text
+{
+	margin: 15px;
+	font-size: 3em;
+	text-align: center;
+	font-family: celtic-garamond;
+}
+
+article.story h3.author
+{
+	padding-top: 10px;
+	text-align: center;
+	font-family: celtic-garamond;
+}
+
+div.storyContent h4.partListing
+{
+	padding: 50px;
+	text-align: center;
+}
+
+article
+{
+	padding-bottom: 150px;
+}
+
+article .storyContent
+{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/*	Poem Styles	*/
+
+article.poem
+{
+	font-family: Copperplate, Papyrus, fantasy;
+	background-image: url('../photos/catiepaintface.png');
+	background-size: 100% 100%;
+	width: 75%;
+	height: 800px;
+	min-width: 150px;
+	max-width: 700px;
+    margin: 40px auto 80px;
+    padding: 150px 15px;
+	filter: drop-shadow(2px 4px 6px black);
+}
+
+article.poem .content
+{
+	background: rgba(187, 197, 196, 0.5);
+    width: 50%;
+    height: 80%;
+	text-align: center;
+	padding: 20px;
+}
+
+h2.title
+{
+	margin: 15px;
+	font-size: 2em;
+	
+}
+
+h3.author
+{
+	
+	font-size: 1.2em;
+}
+
+div.content p
+{
+	padding: 5px;
+}
+
+/* Nav Styles */
+
+nav.mainNav
+{
+	display: block;
+	overflow: hidden;
+	width: 97%;
+	min-width: 680px;
+	float: right;
+	clear: right;
+	bottom: 0;
+	position: fixed;
+}
+
+nav.mainNav ul
+{
+	list-style-type: none;
+	padding: 0px;
+}
+
+
+nav.mainNav li a 
+{
+	text-decoration: none;
+	padding: 15px 25px;
+	color: #803720;
+	width: 25%;
+	padding: 10px 0px;
+	display: block;
+	float: left;
+	text-align: center;
+	background-color: #C47E68;
+}
+
+nav.mainNav li a:hover 
+{
+	
+  background-color: #EBB2A0;
+  color: #803720;
+}
+
+
+nav.mainNav li a:active 
+{
+  background-color: #688596;
+  color: #183C51;
+}
+
+
+/* Field Set Styles.FormStyles */
+fieldset
+{
+	border: none;
+	display: block;
+	width: 75%;
+	margin: 10px auto;
+}
+
+fieldset legend
+{
+	background-color: #B18D58;
+	text-align: center;
+	width: 100%;
+}
+
+.preview
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 500ms ease-in-out;
+	border: 1px solid #803720;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: #f3ce93;
+	width: 500px;
+	max-width: 80%;
+}
+
+.preview.active
+{
+	transform: translate(-50%, -50%) scale(1);
+}
+.previewHeader
+{
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px double #803720;
+}
+
+.previewHeader .previewTitle
+{
+	font-size: 1.25rem;
+	font-weight: bolder;
+}
+
+.previewHeader .closePreviewButton
+{
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bolder;
+}
+
+.previewBody
+{
+	padding: 10px 15px;
+}
+
+#overlayPreview
+{
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 5px;
+	transition: .3s;
+	background-color: #803720;
+	pointer-events: none;
+}
+
+#overlayPreview.active
+{
+	opacity: 0.75;
+	pointer-events: all;
+}
+
+/* DIV Styles.FormStyles*/
+div.formintro
+{
+	display: block;
+	width: 40%;
+	margin: 130px auto 130px;
+	min-width: 300px;
+	color: #803720;
+}
+
+div.form
+{
+	background-image: url('../photos/oldPaper.png');
+	background-size: 100% 100%;
+	color: #2B4763;
+	width: 80%;
+	min-width: 490px;
+	max-width: 800px;
+    margin: auto auto 100px;
+    padding: 100px 15px;
+	filter: drop-shadow(2px 4px 6px black);
+}
+	
+
+
+
+/* Control Styles.FormStyles */
+
+label
+{
+	float: left;
+	clear: left;
+	display: block;
+	width: 40%;
+	margin-top: 6px;
+	margin-bottom: 2px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
+
+input, select
+{
+	margin-top: 6px;
+	margin-bottom: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 50%;
+	border: none;
+	
+}
+
+.slider input
+{
+	width: 46%;
+}
+
+
+/* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+
+
+select#genre, select#type
+{
+	display: block;
+	float: left;
+	width: 120px;
+}
+
+label#comments
+{
+	display: block;
+	margin: 10px auto;
+	float: none;
+	text-align: center;
+	font-weight: bold;
+	
+}
+
+#commentBox
+{
+	font-size: 1.5em;
+	width: 75%;
+	height: 150px;
+	display: block;
+	margin: 4px auto 15px;
+	
+}
+/* Placeholder Styles.FormStyles */
+
+textarea::-webkit-textarea-placeholder
+{
+	color: rgb(255, 151, 151);
+	background-color: rgb(255, 255, 191);
+	font-size: 1.5em;
+}
+
+textarea::-ms-textarea-placeholder
+{
+	color: rgb(255, 151, 151);
+	background-color: rgb(255, 255, 191);
+	font-size: 1.5em;
+}
+
+textarea::-moz-placeholder
+{
+	color: rgb(255, 151, 151);
+	background-color: rgb(255, 255, 191);
+	font-size: 1.5em;
+	
+}
+
+/*   Footer Styles   */
+
+footer 
+{
+	margin: auto;
+	text-align: center;
+	display: block;
+	padding: 10px 20px;
+	background: #94A8B4;
+	color: #2B5066;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/*     Media Query    */
+
+
+/*     Media Query.FormStyles    */
+@media screen and (max-width: 575px) {
+	
+nav.mainNav
+{
+	display: block;
+	overflow: hidden;
+	width: 20%;
+	min-width: 680px;
+	float: right;
+	clear: right;
+	bottom: 0;
+	position: fixed;
+}
+
+nav.mainNav li a 
+{
+	padding: 15px 25px;
+	width: 25%;
+	line-height: 100%;
+	padding: 10px 0px;
+	display: block;
+	float: none;
+	text-align: center;
+	font-size: 2em;
+}
+	
+article.poem
+{
+	background-image: url(../photos/catiepaintface.png);
+	background: rgba(187, 197, 196, 0.5);
+    width: 100%;
+	min-width: 320px;
+    height: 100%;
+	text-align: center;
+	padding: 20px;
+}
+
+article.poem .content
+{
+	background-image: url(../photos/catiepaintface.png);
+	background: rgba(187, 197, 196, 0.5);
+    width: 100%;
+    height: 100%;
+	text-align: center;
+	padding: 20px;
+}
+div.formintro
+{
+	display: block;
+	width: 100%;
+	margin: 75px 50px 75px;
+	min-width: 350px;
+	color: #803720;
+}
+
+div.formintro h2, div.formintro p
+{
+	padding: 10px;
+	max-width: 350px;
+}
+
+div.form
+{
+	width: 100%;
+}
+
+input, select
+{
+	  width: 100%;
+}
+
+}

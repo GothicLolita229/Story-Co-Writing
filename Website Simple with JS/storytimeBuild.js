@@ -1,5 +1,3 @@
-
-
 fetch("header.html")
   .then(response => {
     return response.text()
@@ -7,6 +5,15 @@ fetch("header.html")
   .then(data => {
     document.querySelector("header").innerHTML = data;
   });
+
+  fetch("footer.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("footer").innerHTML = data;
+  });
+
 
 function formSubmit()
 {
@@ -34,13 +41,13 @@ const closePreviewButtons = document.querySelectorAll("[data-closePreview-button
 const overlay = document.getElementById("overlayPreview");
 
 openPreviewButtons.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function() {
         formSubmit();
         const preview = document.querySelector(button.dataset.previewTarget);
         openPreview(preview);
     });
 });
-overlay.addEventListener("click", () => {
+overlay.addEventListener("click", function() {
     const previews = document.querySelectorAll(".preview.active")
     previews.forEach(preview => 
         {
@@ -49,7 +56,7 @@ overlay.addEventListener("click", () => {
 });
 
 closePreviewButtons.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function() {
         const preview = button.closest(".preview")
         closePreview(preview);
     });

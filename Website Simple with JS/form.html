@@ -33,7 +33,7 @@
 			expandable text box for any additional comments and nuances you'd like to put in your story.
 			Now start inventing and begin the fun!</p>
 	</div>
-	<div class="form">
+	<form class="form" id="infoForm" action="mailto:linaresl1836@student.faytechcc.edu" method="get" enctype="text/plain">
 		<fieldset id="litstyler">
 			<legend>Adveturer Info</legend>
 			
@@ -73,11 +73,27 @@
 			<label for="level">Reading Level by Grade</label>
 				<div class="slider">
 					1 <input type="range" id="level" name="level" min="1" max="12" step="1" value="0"> 12
+					<p>Reading Level: <span id="demoLevel"></span></p>
 				</div>
+				<script>
+					var slider = document.getElementById("level");
+					var output = document.getElementById("demoLevel");
+					output.innerHTML = slider.value;
+					
+					slider.oninput = function() {
+					  output.innerHTML = this.value;
+					}
+					</script>
 			
 			<label for="comments" id="comments">Additional Lit Info</label>
 			<textarea id="commentBox" name="comments" tabindex="1" placeholder="Enter any additional comments or storylines you'd like to include"></textarea>
 			<button name="submitButton" onclick="formSubmit()">Submit</button>
+			<button name="clearButton" onclick="myFunction()" value="Reset form">Clear Form</button>
+			<script>
+				function myFunction() {
+				  document.getElementById("infoForm").reset();
+				}
+			</script>
 			<button data-preview-target="#preview">Preview</button>
 			<div class="preview" id="preview">
 				<div class="previewHeader">
@@ -90,12 +106,10 @@
 			</div>
 			<div id="overlayPreview"></div>
 		</fieldset>
-	</div>
-	
+	</form>
+	<script	src="storytimeBuild.js" ></script>
 </body>
-<footer>
-<p>&copy;2022 Linaresl1836 All rights reserved</p>
-<script	src="storytimeBuild.js" ></script>
+<footer id="foot">
 </footer>
 
 </html>

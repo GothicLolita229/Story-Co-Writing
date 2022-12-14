@@ -287,7 +287,7 @@ fieldset legend
 	right: 0;
 	bottom: 0;
 	border-radius: 5px;
-	transition: .3s;
+	transition: all 3s ease;
 	background-color: #803720;
 	pointer-events: none;
 }

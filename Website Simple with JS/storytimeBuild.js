@@ -40,14 +40,16 @@ const openPreviewButtons = document.querySelectorAll("[data-preview-target]");
 const closePreviewButtons = document.querySelectorAll("[data-closePreview-button]");
 const overlay = document.getElementById("overlayPreview");
 
+
 openPreviewButtons.forEach(button => {
-    button.addEventListener("click", function() {
+    button.addEventListener("click", () => {
         formSubmit();
         const preview = document.querySelector(button.dataset.previewTarget);
         openPreview(preview);
     });
 });
-overlay.addEventListener("click", function() {
+
+overlay.addEventListener("click", () => {
     const previews = document.querySelectorAll(".preview.active")
     previews.forEach(preview => 
         {
@@ -56,7 +58,7 @@ overlay.addEventListener("click", function() {
 });
 
 closePreviewButtons.forEach(button => {
-    button.addEventListener("click", function() {
+    button.addEventListener("click", () => {
         const preview = button.closest(".preview")
         closePreview(preview);
     });

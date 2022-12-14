@@ -33,7 +33,7 @@
 			expandable text box for any additional comments and nuances you'd like to put in your story.
 			Now start inventing and begin the fun!</p>
 	</div>
-	<form class="form" id="infoForm" action="mailto:linaresl1836@student.faytechcc.edu" method="get" enctype="text/plain">
+	<form class="form" action="mailto:linaresl1836@student.faytechcc.edu" id="infoForm" method="post" enctype="text/plain"> <!-- action="mailto:linaresl1836@student.faytechcc.edu" id="infoForm" method="get" enctype="text/plain" -->
 		<fieldset id="litstyler">
 			<legend>Adveturer Info</legend>
 			
@@ -87,14 +87,11 @@
 			
 			<label for="comments" id="comments">Additional Lit Info</label>
 			<textarea id="commentBox" name="comments" tabindex="1" placeholder="Enter any additional comments or storylines you'd like to include"></textarea>
-			<button name="submitButton" onclick="formSubmit()">Submit</button>
-			<button name="clearButton" onclick="myFunction()" value="Reset form">Clear Form</button>
-			<script>
-				function myFunction() {
-				  document.getElementById("infoForm").reset();
-				}
-			</script>
-			<button data-preview-target="#preview">Preview</button>
+			<button name="submitButton" type="submit" onclick="formSubmit()">Submit</button>
+
+			<button type="reset" value="Reset form">Clear Form</button>
+			
+			<button data-preview-target="#preview" type="button">Preview</button>
 			<div class="preview" id="preview">
 				<div class="previewHeader">
 					<div class="previewTitle">Here is the information we have so far: </div>
